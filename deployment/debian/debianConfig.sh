@@ -13,4 +13,16 @@ sudo apt purge imagemagick gnome-terminal
 sudo dpkg-reconfigure unattended-upgrades
 # Update + Upgrade and clean up system.
 sudo apt update && sudo apt upgrade && sudo apt autopurge && sudo apt clean
+echo "See FURTHER NOTES section in debianConfig.sh for further details."
+sleep 10
 exit
+
+# FURTHER NOTES
+# Install the gnome extensions: 'Blur My Shell', 'Caffeine' and 'Just Perfection'.
+# To completely remove ImageMagick
+# sudo nala purge imagemagick-6-common && sudo nala clean && sudo nala autopurge
+# To make a swapfile of 4GB at /
+# sudo dd if=/dev/zero of=/swapfile bs=1G count=4
+# sudo mkswap /swapfile
+# sudo chmod 0600 /swapfile
+# To mount run "sudo swapon /swapfile"
