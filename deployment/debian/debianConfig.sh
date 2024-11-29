@@ -26,3 +26,7 @@ exit
 # sudo mkswap /swapfile
 # sudo chmod 0600 /swapfile
 # To mount run "sudo swapon /swapfile"
+# To remove a Logical Volume:
+# sudo lvremove /dev/VOLUME_GROUP/LOGICAL_VOLUME
+# To fill all of the unallocated space in the Volume Group:
+# sudo lvextend -l +100%FREE /dev/VOLUME_GROUP/LOGICAL_VOLUME
